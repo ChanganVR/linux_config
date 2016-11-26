@@ -1,4 +1,6 @@
 alias ll='ls -alF'
+alias python='python3'
+alias py='python3'
 
 # define colors
 red='\[\e[0;31m\]'

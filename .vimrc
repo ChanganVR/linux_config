@@ -1,4 +1,4 @@
-"echo 'Hello Changan, have a nice day!'
+"echo 'Hello Changan, have a nice day :)'
 
 set number
 "set relativenumber
@@ -110,6 +110,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_python_flake8_post_args='--ignore=E501'
+
+let NERDTreeShoeHidden=1
 
 "python syntax highlight
 let python_highlight_all=1
@@ -129,10 +132,14 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>pl :PluginInstall<cr>
 nnoremap <leader>nt :NERDTreeToggle<cr>
 nnoremap <leader>w :w<cr>
-nnoremap <leader>q :wq<cr>
+nnoremap <leader>q :q<cr>
 nnoremap <leader>i i<space><esc>
 nnoremap <leader>st :SyntasticToggleMode<cr>
 nnoremap <leader>sc :SyntasticCheck<cr>
+"close error temporarily
+nnoremap <leader>sr :SyntasticReset<cr>
+nnoremap <leader>yd :YcmDiags<cr>
+
 
 set splitbelow
 set splitright
