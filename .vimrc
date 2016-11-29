@@ -1,5 +1,6 @@
 "echo 'Hello Changan, have a nice day :)'
 
+set pastetoggle=<F2>
 set number
 "set relativenumber
 
@@ -89,6 +90,7 @@ filetype plugin indent on
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_atl_sep = ' '
+let g:airline#extensions#tabline#buffer_nr_show = 1
 
 if has('gui_running')
     "echo 'color scheme in GUI mode'
