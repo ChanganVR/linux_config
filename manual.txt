@@ -1,0 +1,5 @@
+show how many disk space is usable
+df -h path
+
+show how large is the directory
+du -sh

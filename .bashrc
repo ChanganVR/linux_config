@@ -1,3 +1,14 @@
+export PJ=/local-scratch/changan/CVPR17
+
+export PATH=$HOME/python3/bin/:$PATH
+export PATH=$HOME/python2/bin/:$PATH
+export WORKON_HOME=/local-scratch/changan/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=$HOME/python3/bin/python3.5
+#export PROJECT_HOME=$HOME/projects      # optional
+source $HOME/python3/bin/virtualenvwrapper.sh
+
+alias path='/ugrad/1/cca278/python3/bin/pip3'
+alias path='readlink -f'
 alias sl='ls'
 alias l='ls'
 alias ll='ls -lhA'
@@ -12,6 +23,7 @@ alias .4='cd ../../../..'
 alias c='claer'
 alias mkdir='mkdir -pv'
 alias ports='netstat -tulanp'
+alias open='xdg-open'
 
 # define colors
 red='\[\e[0;31m\]'
@@ -58,3 +70,9 @@ extract () {
    fi
  }
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/ugrad/1/cca278/gcloud/google-cloud-sdk/path.bash.inc' ]; then source '/ugrad/1/cca278/gcloud/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/ugrad/1/cca278/gcloud/google-cloud-sdk/completion.bash.inc' ]; then source '/ugrad/1/cca278/gcloud/google-cloud-sdk/completion.bash.inc'; fi
