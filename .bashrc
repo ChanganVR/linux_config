@@ -1,13 +1,18 @@
-export PJ=/local-scratch/changan/CVPR17
+export PJ=/local-scratch/changan-home/CVPR17
 
 export PATH=$HOME/python3/bin/:$PATH
-export PATH=$HOME/python2/bin/:$PATH
-export WORKON_HOME=/local-scratch/changan/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=$HOME/python3/bin/python3.5
-#export PROJECT_HOME=$HOME/projects      # optional
+#export PATH=$HOME/python2/bin/:$PATH
+
+# To use virtualenv with wrapper
+# 1. python3/bin/pip3 install virtualenvwrapper
+# 2. source .bashrc
+# 3. mkvirtualenv cv -p python3
+# 4. workon cv
+export WORKON_HOME=/local-scratch/changan-home/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=$HOME/python3/bin/python3
 source $HOME/python3/bin/virtualenvwrapper.sh
 
-alias path='/ugrad/1/cca278/python3/bin/pip3'
+alias path='/local-scratch/changan-home/python3/bin/pip3'
 alias path='readlink -f'
 alias sl='ls'
 alias l='ls'
@@ -50,25 +55,25 @@ PS1="${error}${yellow}[\t] ${CYAN}\u${NC}@${PINK}\h:${BLUE}\w\n${RED}\$ ${NC}"
 
 # extract archives
 extract () {
-   if [ -f $1 ] ; then
-       case $1 in
-           *.tar.bz2)   tar xvjf $1    ;;
-           *.tar.gz)    tar xvzf $1    ;;
-           *.bz2)       bunzip2 $1     ;;
-           *.rar)       unrar x $1       ;;
-           *.gz)        gunzip $1      ;;
-           *.tar)       tar xvf $1     ;;
-           *.tbz2)      tar xvjf $1    ;;
-           *.tgz)       tar xvzf $1    ;;
-           *.zip)       unzip $1       ;;
-           *.Z)         uncompress $1  ;;
-           *.7z)        7z x $1        ;;
-           *)           echo "don't know how to extract '$1'..." ;;
+   if [ -f "$1" ] ; then
+       case "$1" in
+           *.tar.bz2)   tar xvjf "$1"    ;;
+           *.tar.gz)    tar xvzf "$1"    ;;
+           *.bz2)       bunzip2 "$1"     ;;
+           *.rar)       unrar x "$1"     ;;
+           *.gz)        gunzip "$1"      ;;
+           *.tar)       tar xvf "$1"     ;;
+           *.tbz2)      tar xvjf "$1"    ;;
+           *.tgz)       tar xvzf "$1"    ;;
+           *.zip)       unzip "$1"       ;;
+           *.Z)         uncompress "$1"  ;;
+           *.7z)        7z x "$1"        ;;
+           *)           echo "don't know how to extract '$1'... ";;
        esac
    else
        echo "'$1' is not a valid file!"
    fi
- }
+}
 
 
 # The next line updates PATH for the Google Cloud SDK.

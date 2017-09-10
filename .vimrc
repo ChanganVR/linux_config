@@ -59,7 +59,7 @@ Plugin 'L9'
 "Plugin 'hdima/python-syntax'
 
 "autocomplete
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 
 "python syntax check
 Plugin 'scrooloose/syntastic'
