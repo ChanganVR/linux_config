@@ -1,17 +1,7 @@
-export PJ=/local-scratch/changan-home/CVPR17
+# import external environment settings
+source .bash_external
 
-export PATH=$HOME/python3/bin/:$PATH
-#export PATH=$HOME/python2/bin/:$PATH
-
-# To use virtualenv with wrapper
-# 1. python3/bin/pip3 install virtualenvwrapper
-# 2. source .bashrc
-# 3. mkvirtualenv cv -p python3
-# 4. workon cv
-export WORKON_HOME=/local-scratch/changan-home/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=$HOME/python3/bin/python3
-source $HOME/python3/bin/virtualenvwrapper.sh
-
+# alias
 alias path='/local-scratch/changan-home/python3/bin/pip3'
 alias path='readlink -f'
 alias sl='ls'
@@ -25,7 +15,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
-alias c='claer'
+alias c='clear'
 alias mkdir='mkdir -pv'
 alias ports='netstat -tulanp'
 alias open='xdg-open'
@@ -53,8 +43,9 @@ NC='\[\e[0m\]'
 error="\$(if [[ \$? == 0 ]]; then echo \"\[\033[0;32m\][\$?\342\234\223]\"; else echo \"\[\033[0;31m\][\$?\342\234\227]\"; fi)\[\033[00m\]"
 PS1="${error}${yellow}[\t] ${CYAN}\u${NC}@${PINK}\h:${BLUE}\w\n${RED}\$ ${NC}"
 
+# function
 # extract archives
-extract () {
+ex () {
    if [ -f "$1" ] ; then
        case "$1" in
            *.tar.bz2)   tar xvjf "$1"    ;;
@@ -75,9 +66,3 @@ extract () {
    fi
 }
 
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/ugrad/1/cca278/gcloud/google-cloud-sdk/path.bash.inc' ]; then source '/ugrad/1/cca278/gcloud/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/ugrad/1/cca278/gcloud/google-cloud-sdk/completion.bash.inc' ]; then source '/ugrad/1/cca278/gcloud/google-cloud-sdk/completion.bash.inc'; fi

@@ -1,0 +1,20 @@
+export PJ=/local-scratch/changan-home/CVPR17
+
+export PATH=$HOME/python3/bin/:$PATH
+
+# To use virtualenv with wrapper
+# 1. python3 -m pip install virtualenvwrapper
+# 2. source .bashrc
+# 3. mkvirtualenv cv -p python3
+# 4. workon cv
+export WORKON_HOME=/local-scratch/changan-home/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=$HOME/python3/bin/python3
+source $HOME/python3/bin/virtualenvwrapper.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/ugrad/1/cca278/gcloud/google-cloud-sdk/path.bash.inc'  ]; then
+source '/ugrad/1/cca278/gcloud/google-cloud-sdk/path.bash.inc'; fi
+
+# # The next line enables shell command completion for gcloud.
+if [ -f '/ugrad/1/cca278/gcloud/google-cloud-sdk/completion.bash.inc'  ]; then
+source '/ugrad/1/cca278/gcloud/google-cloud-sdk/completion.bash.inc'; fi
