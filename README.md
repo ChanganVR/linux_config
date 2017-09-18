@@ -12,10 +12,10 @@ pip install flake8
 
 Use :help <plugin name> for detailed document
 
-![image](https://ibb.co/doxtik)
+![Imgur](https://i.imgur.com/p4IcUZb.png)
 
 # Bash
 Basic bash config commands are in .bashrc file. External settings including imports
 and library setup are contained in .bash_external file.  
 
-![image](https://ibb.co/fYJAUQ)
+![Imgur](https://i.imgur.com/4Tbxnc2.png)
