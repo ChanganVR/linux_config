@@ -1,13 +1,12 @@
 # import external environment settings
-source .bash_external
+source ~/.bash_external
 
 # alias
-alias path='/local-scratch/changan-home/python3/bin/pip3'
 alias path='readlink -f'
 alias sl='ls'
 alias l='ls'
 alias ll='ls -lhA'
-alias python='python3'
+alias py2='python2'
 alias py='python3'
 alias cd..="cd .."
 alias ..='cd ..'
@@ -19,6 +18,11 @@ alias c='clear'
 alias mkdir='mkdir -pv'
 alias ports='netstat -tulanp'
 alias open='xdg-open'
+
+# ls colors
+export LS_OPTIONS='--color=auto'
+eval "$(dircolors -b)"
+alias ls='ls $LS_OPTIONS'
 
 # define colors
 red='\[\e[0;31m\]'
@@ -40,7 +44,8 @@ BLACK='\[\e[1;38m\]'
 NC='\[\e[0m\]'
  
 # prompt
-error="\$(if [[ \$? == 0 ]]; then echo \"\[\033[0;32m\][\$?\342\234\223]\"; else echo \"\[\033[0;31m\][\$?\342\234\227]\"; fi)\[\033[00m\]"
+EXITCODE="$?"
+error="\$(if [[ $EXITCODE == 0 ]]; then echo \"\[\033[0;32m\][\$?\342\234\223]\"; else echo \"\[\033[0;31m\][\$?\342\234\227]\"; fi)\[\033[00m\]"
 PS1="${error}${yellow}[\t] ${CYAN}\u${NC}@${PINK}\h:${BLUE}\w\n${RED}\$ ${NC}"
 
 # function
