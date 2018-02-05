@@ -1,5 +1,5 @@
 # import external environment settings
-source ~/.bash_external
+source ~/.bash_local
 
 # alias
 alias path='readlink -f'
