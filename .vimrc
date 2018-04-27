@@ -11,9 +11,11 @@ set softtabstop=4
 set shiftwidth=4
 
 set autoindent
-set textwidth=80
+"insert a newline when text exceeds 80 characters
+"set textwidth=80
 set wrap
 set linebreak
+set nolist
 set ruler
 
 "highlight search result

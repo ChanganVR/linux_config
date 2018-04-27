@@ -1,13 +1,16 @@
 #/bin/bash
-alias pycharm=~/software/pycharm-community-2017.2.1/bin/pycharm.sh
-alias clion=~/software/clion-2017.2.2/bin/clion.sh
+alias pycharm="~/software/pycharm-community-2017.2.1/bin/pycharm.sh &"
+alias clion="~/software/clion-2017.2.2/bin/clion.sh &"
+alias matlab="~/lib/bin/matlab &"
+alias dropbox="~/.dropbox-dist/dropboxd &" 
+
+# matlab
+export PATH="$HOME/lib/bin:$PATH"
 
 # skimcaffe
 source /local-scratch/changan-home/intel/compilers_and_libraries/linux/bin/compilervars.sh intel64
 source /local-scratch/changan-home/intel/parallel_studio_xe_2018.1.038/bin/psxevars.sh
 export LD_LIBRARY_PATH="/local-scratch/changan-home/lib/boost/lib:$LD_LIBRARY_PATH"
-
-# SkimCaffe
 export PYTHONPATH=/local-scratch/changan-home/SkimCaffe/python
 
 # pyenv
