@@ -61,7 +61,7 @@ Plugin 'L9'
 "Plugin 'hdima/python-syntax'
 
 "autocomplete
-"Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 "python syntax check
 Plugin 'scrooloose/syntastic'
@@ -84,6 +84,10 @@ Plugin 'jiangmiao/auto-pairs'
 "color scheme
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
+
+
+"commeting
+Plugin 'scrooloose/nerdcommenter'
 
 call vundle#end()
 filetype plugin indent on
@@ -117,6 +121,28 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_python_flake8_post_args='--ignore=E501'
 
 let NERDTreeShoeHidden=1
+
+"NerdCommenter config
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
 
 "python syntax highlight
 let python_highlight_all=1
