@@ -1,18 +1,4 @@
 #/bin/bash
-alias pycharm="~/software/pycharm-community-2017.2.1/bin/pycharm.sh &"
-alias clion="~/software/clion-2017.2.2/bin/clion.sh &"
-alias matlab="~/lib/bin/matlab &"
-alias dropbox="~/.dropbox-dist/dropboxd &" 
-
-# matlab
-export PATH="$HOME/lib/bin:$PATH"
-
-# skimcaffe
-source /local-scratch/changan-home/intel/compilers_and_libraries/linux/bin/compilervars.sh intel64
-source /local-scratch/changan-home/intel/parallel_studio_xe_2018.1.038/bin/psxevars.sh
-export LD_LIBRARY_PATH="/local-scratch/changan-home/lib/boost/lib:$LD_LIBRARY_PATH"
-export PYTHONPATH=/local-scratch/changan-home/SkimCaffe/python
-
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -21,15 +7,3 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 eval "$(pyenv virtualenv-init -)"
 
-# To use virtualenv with wrapper
-# 1. python3 -m pip install virtualenvwrapper
-# 2. source .bashrc
-# 3. mkvirtualenv cv -p python3
-# 4. workon cv
-#export WORKON_HOME=/local-scratch/changan-home/.virtualenvs
-#export VIRTUALENVWRAPPER_PYTHON=$HOME/python3/bin/python3
-#source $HOME/python3/bin/virtualenvwrapper.sh
-
-#To run PIN tool
-export PATH=/local-scratch/changan/nvedula/cnn_hardware/SkimCaffe/simulator/pin-3.0-76991-gcc-linux:$PATH
-export PIN_ROOT=/local-scratch/changan/nvedula/cnn_hardware/SkimCaffe/simulator/pin-3.0-76991-gcc-linux
