@@ -7,14 +7,17 @@ My personal configuration for vim and bash.
 ```
 bash setup.sh
 ```
-2. Install vim plugins: open vim and enter :PluginInstall
+2. Install vim plugins: open vim and enter command
+```
+:PluginInstall
+```
 3. To enable python syntax check
 ```
 pip install flake8
 ```
 
 ## Usage
-1. Vim shortcuts: enter :help <plugin name> for documentation
+1. Vim shortcuts: enter **:help** <plugin name> for documentation
 2. Add external bash configurations in .bash_local file
 
 
