@@ -18,6 +18,7 @@ alias c='clear'
 alias mkdir='mkdir -pv'
 alias ports='netstat -tulanp'
 alias open='xdg-open'
+alias ta='tmux -CC attach'
 
 # ls colors
 export LS_OPTIONS='--color=auto'
